@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F000" >
+
+    <!--
+    Logo 
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/logo"/>
+    -->
+
+
+    <!-- Anchor View -->
+
+    <View
+        android:id="@+id/anchorView"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true" />
+
+    <!-- Selection Section -->
+
+    <TextView
+        android:id="@+id/topSelectionHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:text="Controls"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!-- <LinearLayout
+        android:id="@+id/selectionSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/topSelectionHeader"
+        android:orientation="horizontal" >
+    </LinearLayout> -->
+
+    <!-- Start Section -->
+
+    <TextView
+        android:id="@+id/topStartHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:text="Automate"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+   <!--  <LinearLayout
+        android:id="@+id/startSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/topStartHeader"
+        android:orientation="horizontal" >
+    </LinearLayout>
+ -->
+    <!-- Arcade Buttons -->
+
+    <!-- <LinearLayout
+        android:id="@+id/topArcadeButtonsSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal" >
+    </LinearLayout> -->
+
+    <Button
+        android:id="@+id/buttonA"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/arcade_button_states" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buttonD"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/hazard"
+        android:drawable="@drawable/hazard"
+        android:state_selected="true"
+        android:text="STOP"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/buttonD"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignLeft="@+id/buttonC"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/arcade_button_states" />
+
+    <Button
+        android:id="@+id/buttonB"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignBaseline="@+id/buttonA"
+        android:layout_alignBottom="@+id/buttonA"
+        android:layout_marginLeft="52dp"
+        android:layout_toRightOf="@+id/buttonA"
+        android:background="@drawable/arcade_button_states" />
+
+    <Button
+        android:id="@+id/buttonC"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="26dp"
+        android:layout_toRightOf="@+id/topSelectionHeader"
+        android:background="@drawable/arcade_button_states" />
+
+    <com.camera.simplemjpeg.MjpegView
+        android:id="@+id/mv"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignRight="@+id/topStartHeader"
+        android:layout_below="@+id/topStartHeader"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/ButtonAuto"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/buttonB"
+        android:background="@drawable/hazard"
+        android:drawable="@drawable/hazard"
+        android:state_selected="true"
+        android:text="Auto"
+        android:textSize="15sp" />
+
+</RelativeLayout>

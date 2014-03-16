@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ArcadeControl</string>
+    <string name="action_settings">Settings</string>
+    
+    <!-- Buttons Content -->
+    <string name="selectionHeader">Selection Section</string>
+    <string name="startHeader">Start Section</string>
+    <string name="escText">Esc</string>
+    <string name="enterText">Enter</string>
+    <string name="coinText">Coin</string>
+    <string name="startText">Start</string>
+    <string name="aText">Z</string>
+    <string name="bText">X</string>
+    <string name="cText">A</string>
+    <string name="dText">S</string>
+    <string name="upText">UP</string>
+    <string name="downText">DOWN</string>
+    <string name="leftText">LEFT</string>
+    <string name="rightText">RIGHT</string>
+
+</resources>

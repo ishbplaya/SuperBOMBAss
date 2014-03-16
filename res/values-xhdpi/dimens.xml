@@ -1,0 +1,10 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+	<dimen name="joystick_holder_width">170dp</dimen>
+	<dimen name="joystick_holder_height">170dp</dimen>
+	<dimen name="joystick_middle_width">75dp</dimen>
+	<dimen name="joystick_middle_height">75dp</dimen>
+	<dimen name="joystick_radius">10dp</dimen>
+	
+</resources>
