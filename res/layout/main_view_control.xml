@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#F000" >
+
+    <com.camera.simplemjpeg.MjpegView
+        android:id="@+id/mv"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_above="@+id/ButtonAuto"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/buttonB"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/buttonD"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignLeft="@+id/buttonC"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_state_down" />
+
+    <Button
+        android:id="@+id/buttonC"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_above="@+id/buttonA"
+        android:layout_alignRight="@+id/buttonB"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/button_state_up" />
+
+    <Button
+        android:id="@+id/buttonB"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_above="@+id/buttonD"
+        android:layout_marginLeft="36dp"
+        android:layout_toRightOf="@+id/buttonA"
+        android:background="@drawable/button_state_right" />
+
+    <Button
+        android:id="@+id/buttonA"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_above="@+id/buttonD"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/button_state_left" />
+
+    <Button
+        android:id="@+id/ButtonAuto"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mv"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="202dp"
+        android:background="@drawable/button_state_auto"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/mv"
+        android:background="@drawable/arcade_button_states"
+        android:text="STOP"
+        android:textSize="15sp" />
+
+</RelativeLayout>

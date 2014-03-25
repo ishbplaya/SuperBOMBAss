@@ -64,17 +64,22 @@ public class ArcadeControl extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.activity_arcade_control);
+		setContentView(R.layout.main_view_control);
 		
 		int[] ids = {R.id.buttonStop, R.id.ButtonAuto, R.id.buttonA, R.id.buttonB, R.id.buttonC, R.id.buttonD};
 		String[] actions = {"STOP","AUTO" ,"Z", "X", "A", "S"};
 		
-		mv = (MjpegView) findViewById(R.id.mv);
-		if(mv != null){
-        	mv.setResolution(width, height);
-        }
-		URL = "http://192.168.0.118:8081/video.mjpeg";
-		new DoRead().execute(URL);
+		try {
+			mv = (MjpegView) findViewById(R.id.mv);
+			if(mv != null){
+				mv.setResolution(width, height);
+			}
+			URL = "http://192.168.9.102:8081/video.mjpeg";
+			new DoRead().execute(URL);
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		for(int i = 0 ; i < ids.length ; i++){
 			int id = ids[i];
 			actionsMap.put(id, actions[i]);
@@ -90,8 +95,8 @@ public class ArcadeControl extends Activity {
 			@Override
 			public void run() {
 				try{
-					InetAddress serverAddr = InetAddress.getByName("192.168.0.118");
-					socket = new Socket(serverAddr, 2312);
+					InetAddress serverAddr = InetAddress.getByName("192.168.9.102");
+					socket = new Socket(serverAddr, 2320);
 					out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())), true);
 					
 					//TODO: Keep reading until the app gets destroyed...
